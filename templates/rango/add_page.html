@@ -1,10 +1,12 @@
 <!DOCTYPE html>
- <html>
-    <head>
-        <title>Rango</title>
-     </head>
+{% extends 'rango/base.html' %}
+{% load staticfiles %}
 
-    <body>
+{% block title_block %}
+    Add a Page
+  {% endblock %}
+  {% block body_block %}
+    
         <h1>Add a Page to {{category.name}}</h1>
         <div>
              <!--..the line below was sourced from the modle solution git provided .-->
@@ -20,6 +22,6 @@
             {{ field }}
             {% endfor %}
             <input type="submit" name="submit" value="Add Page" />
-        </form>22 </div>
-    </body>
- </html>
+            </form>22 
+        </div>
+{% endblock %}
